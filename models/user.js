@@ -39,10 +39,11 @@ const userSchema = mongoose.Schema({
         type: Boolean,
         default: true
     },
-    fingerprintData: { // Para autenticación biométrica futura
-        type: Object // La estructura exacta dependerá de la implementación de WebAuthn
-    },
-    timestamps: true // Esto añadirá createdAt y updatedAt automáticamente
+    fingerprintData: {
+        type: Object
+    }
+}, {
+    timestamps: true
 });
 
 module.exports = mongoose.model('User', userSchema);
